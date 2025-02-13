@@ -1,7 +1,9 @@
 // Animation Timeline
 const animationTimeline = () => {
-  const audio = new Audio("img/audio.mp3");
-audio.play();
+  
+
+ 
+  
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
@@ -270,13 +272,11 @@ audio.play();
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
- // Botón para reiniciar animación y música
- const replyBtn = document.getElementById("replay");
- replyBtn.addEventListener("click", () => {
-   tl.restart();
-   audio.currentTime = 0; // Reinicia el audio
-   audio.play();
- });
+  // Restart Animation on click
+  const replyBtn = document.getElementById("replay");
+  replyBtn.addEventListener("click", () => {
+    tl.restart();
+  });
 };
 
 // Import the data to customize and insert them into page

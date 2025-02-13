@@ -7,6 +7,28 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+#btnPresioname {
+  z-index: 1000; /* O un valor mayor que otros elementos */
+  position: fixed;
+  top: 10px; /* Ajusta según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+#btnPresioname:hover {
+  background-color: #ff1f4d;
+}
+
+
 .container {
   height: 100vh;
   width: 100vh;
