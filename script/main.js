@@ -1,10 +1,7 @@
 // Animation Timeline
 const animationTimeline = () => {
-
-   // Reproducir audio automáticamente
-   const audio = document.getElementById("background-music");
-   audio.play().catch(error => console.log("Reproducción bloqueada:", error));
-
+  const audio = new Audio("img/audio.mp3");
+audio.play();
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
@@ -273,15 +270,14 @@ const animationTimeline = () => {
   // tl.seek("currentStep");
   // tl.timeScale(2);
 
-// Botón para reiniciar animación y música
-  const replyBtn = document.getElementById("replay");
-  replyBtn.addEventListener("click", () => {
-    tl.restart();
-    audio.currentTime = 0; // Reinicia el audio
-    audio.play();
-  });
+ // Botón para reiniciar animación y música
+ const replyBtn = document.getElementById("replay");
+ replyBtn.addEventListener("click", () => {
+   tl.restart();
+   audio.currentTime = 0; // Reinicia el audio
+   audio.play();
+ });
 };
-
 
 // Import the data to customize and insert them into page
 const fetchData = () => {
